@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title >global variable testing</title>
+    </head>
+    <body onload="checkscope()">
+        <script>
+        var value="global";
+        function checkscope()
+        {
+            var value="local";
+            document.write(value);
+            console.log(value);
+        }
+        </script>
+    </body>
+</html>

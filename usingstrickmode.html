@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>using strict mode in local and global scope</title>
+    </head>
+    <body>
+        <script>
+            //global
+            // 'use strict';
+            // let x=100 ;//valid
+            // document.write("the value of x is"+x+"</br>");
+            // y=200;//invalid because declaration is not there
+            // document.write("the value of y is"+y+"</br>");
+            // //output x=100
+         
+
+
+            //local scope
+            let l=90;
+            document.write("the value of l is "+l+"</br>");
+            function test ()
+            {
+                "use strict";
+                 m=30;//error 
+                 document.write("the value of m  is "+m+"</br>");
+
+            }
+            test();
+        </script>
+    </body>
+</html>

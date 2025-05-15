@@ -18,12 +18,14 @@
             //local scope
             let l=90;
             document.write("the value of l is "+l+"</br>");
+            console.log(l);
             function test ()
             {
-                "use strict";
-                 m=30;//error 
-                 document.write("the value of m  is "+m+"</br>");
-
+                //"use strict";
+                 let  l=30;//error 
+                  l=40;
+                 document.write("the value of m  is "+l+"</br>");
+                 console.log(l);
             }
             test();
         </script>

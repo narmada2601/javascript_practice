@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><title>return statements</title></head>
+    
+
+<body>
+<script>
+    function display()
+    {
+          console.log("This will be executed");
+          return "returing from function";
+          console.log("this wont be executed");
+    }
+    let message=display();
+    console.log(message);
+
+
+    //to store a function in square variable
+    let square=function(num){
+        return num*num;
+    }
+    console.log(square(5));
+
+   //function to calculate the factorial of number.
+   function factorialNumber(n){
+       if(n===0||n===1)
+    {
+        return 1;
+    }
+    else 
+    {
+    return n*  factorialNumber(n-1);
+    } 
+}
+   let num1=6;
+    let result=factorialNumber(num1);
+    console.log("The Factorial of the number is +num1+:",+result);
+
+//calculate the average of numbers
+let array = [10, 22, 16, 24];
+let sum = array.reduce((acc, curr) => acc + curr, 0);
+let average = sum / array.length;
+console.log("Average: "+average);
+</script>
+</body>
+</html>

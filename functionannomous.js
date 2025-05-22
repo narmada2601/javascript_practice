@@ -57,9 +57,11 @@ for(var i=0;i<=5;i++){
 //example of passing anonymous function as object;
 
 let person={
-    Fname:"narmada",
+     Fname:"narmada",
     LastName:"teegala"
 };
+
+
 (function()
 {
     console.log(person.Fname+" " +person.LastName); 

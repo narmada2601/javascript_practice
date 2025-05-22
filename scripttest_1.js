@@ -2,14 +2,14 @@
 //sum of two numbers.........
 var z;
 function sum(){
-      let x=10;
-    let  y=20;
+       x=10;
+      y=20;
           z=x+y;
            
           }
    sum();
 
- console.log("the sum of two numbers are"+z);
+ console.log("the sum of two numbers are",+z);
 
    //multiply......................
    let multiply=function(x,y){
@@ -17,8 +17,9 @@ function sum(){
 
    }
    console.log("the muliply of two numbers are:"+multiply(x,y));
+  //console.log("the muliply of two numbers are:"+multiply());
   
- multiply(10,20);
+ multiply();
    
          
    //square of the number...........

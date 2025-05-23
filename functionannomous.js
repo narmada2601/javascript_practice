@@ -66,4 +66,4 @@ let person={
 {
     console.log(person.Fname+" " +person.LastName); 
 })
-person();
+(person);

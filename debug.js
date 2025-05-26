@@ -7,6 +7,7 @@ function item()
     let noofbooks=4;
         console.log("The No of books are:"+noofbooks);
         console.log("\n\n");
+        debugger;
 }
 item();
 //function calling using parameters...........
@@ -19,6 +20,7 @@ function furniture(material1,material2,material3)
 
 
 }
+ debugger;
 furniture("chairs","sofa","tables");
 //function calling using IIDE
 (
@@ -34,7 +36,7 @@ furniture("chairs","sofa","tables");
 
 let fooditem="eggs";
     console.log("The Item is "+fooditem);
-    debugger;
+   
 let estimatedtime="20min";
     console.log("the estimated time for delivery is:"+estimatedtime);
 let yourlocation="ameenpur";

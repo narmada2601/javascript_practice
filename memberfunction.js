@@ -50,6 +50,10 @@ let empDetails={
           return this.brand;
 
     }
+    function bike()
+    {
+        brand="yamaha";
+    }
     car1.prototype.getcarinfo=function(){
         console.log("the car brand is bmw...")
     }

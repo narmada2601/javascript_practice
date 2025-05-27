@@ -17,6 +17,7 @@ console.log(this);
          fruits:["apple","mango","strawberry","watermelon"],
          vegetables:["tamato","capsicum","onion","cucumber"],
         dairy:["curd","milk","ghee"],
+
          products:function(){
             console.log("the fruits in the basket are :"+this.fruits);
             console.log("the vegetables in the  basket are:"+this.vegetables);
@@ -29,15 +30,20 @@ console.log(this);
         foodbasket.products();
 
 //another example
-let car={
-    brand:'bmw ',
-    getbrand:function(){
-          return this.brand;
+function car(){
+    this.brand='bmw ';
+    this.speed=120;
+    this.color="red";
+    ordercardetails=function(){
+          console.log( "your order has been placed sucessfully........");
 
     }
 
 }
-console.log(car.getbrand());
+ cardetails=new car();
+ ordercardetails();
+let information= cardetails.color;
+console.log("the colort of the car is:"+information);
 
 //.......constuctor function context--this refers to newobject has been created 
 
@@ -54,27 +60,42 @@ function passengerinfo()
 new passengerinfo();//construtor
 
 //passing aurguments....
-function updatedinfo(status,country)
+let info= function updatedinfo(status,country)
 {
     this.status=status,
      this.country=country
 
     console.log(this);
 
-}
- new updatedinfo("married","India");
+};
+ new info("married","India");
+ console.log(this);
 
  //arrow functions.............they dont have this they inherit from the parent
 
- let dob="15 oct 1931";
+ var  dob="15 oct 1931";
  var obj={
     name:"apj abdul kalam",
     bookname:"wings of fire",
- }
-    let authorName = ()=>{
-    console.log("authorname:"+this.name);
+    published: ( )=>{
+console.log("authorname:"+this.name);
    console.log("bookname:"+this.bookname);
    console.log("dob:"+this.dob);
+
+ this.country="india";
+ console.log(this.country);
+    }
+   
+ }
+ obj.published();
+    let authorName = ()=>{
+        this.publisheddate={
+            date:"1987",
+        }
+        console.log(this.publisheddate.date);
+    console.log("authorname:"+this.obj.name);
+   console.log("bookname:"+this.obj.bookname);
+   console.log("dob:"+this.obj.dob);
 }
 authorName();
 

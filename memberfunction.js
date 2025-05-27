@@ -44,20 +44,34 @@ let empDetails={
           
 
 
-    function car1(){
-    brand:'bmw ';
-    getbrand=function(){
-          return this.brand;
+//     function car1(){
+//     brand:'bmw ';
+//     getbrand=function(){
+//           return this.brand;
 
-    }
-    function bike()
-    {
-        brand="yamaha";
-    }
-    car1.prototype.getcarinfo=function(){
-        console.log("the car brand is bmw...")
-    }
+//     }
+//     function bike()
+//     {
+//         brand="yamaha";
+//     }
+//     car1.prototype.getcarinfo=function(){
+//         console.log("the car brand is bmw...")
+//     }
 
-}
-let newcar1=new car1();
-newcar1.getcarinfo();
+// }
+// let newcar1=new car1();
+// newcar1.getcarinfo();
+
+
+
+setTimeout(()=>{
+    console.log("hello world 1")
+},4000);
+
+setTimeout(()=>{
+    console.log("hello world 2")
+},8000);
+
+setTimeout(()=>{
+    console.log("hello world 3")
+},5000);

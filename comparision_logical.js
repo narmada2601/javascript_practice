@@ -1,0 +1,44 @@
+//comparision operator---->      ==,!=,>,<,<=,>=,===
+//return boolean values..
+//=== is type correction .check value and also its type(1==="1")false
+function checkMeetingStatus(currentTime, meetingTime) {
+    if (currentTime > meetingTime) {
+        console.log("You're late! The meeting started already.");
+    } else if (currentTime < meetingTime) {
+        console.log("You're early! The meeting hasn't started yet.");
+    } else {
+        console.log("You're right on time! The meeting is starting now.");
+    }
+}
+let meetingTime = "14:00";
+let currentTime = "13:50";  // Change this to test different scenarios
+
+checkMeetingStatus(currentTime, meetingTime);
+ //greater than
+ let age=18;
+ if(age>18)
+ {
+    console.log("you are eligible for voting");
+
+ }
+ //less than<
+ let temperature=-5;
+ if(temperature<0)
+ {
+    console.log("warning:its freezing");
+ }
+ //equal to
+ let enteredpin=123;
+ let correctpin=123;
+ if(enteredpin=correctpin){
+    console.log("pin accepted!you can access...");
+
+ }
+ //
+ let currentSpeed = 50;
+let speedLimit = 60;
+if (currentSpeed <= speedLimit) {
+    console.log("Speed is within limits.");
+} else {
+    console.log("Slow down! Speeding detected.");
+}

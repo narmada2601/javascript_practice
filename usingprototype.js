@@ -1,17 +1,22 @@
 function circle(radius){
-    this.radius=radius
+    this.radius=radius;
 }
 //adding methods to the prototype
 circle.prototype.getArea=function()
 {
-    let radius=this.radius;
-    let mathPivaluve=Math.PI;
-    return mathPivaluve*radius;
+    // let radius=this.radius;
+    // let mathPivaluve=Math.PI;
+    // return mathPivaluve*radius;
+    return Math.PI*this.radius*this.radius;
 };
 circle.prototype.getcircumference=function()
 {
-    return 2*Math.pi*this.radius;
+    return 2*Math.PI*this.radius;
 };
+
+
+
+
 //creating instance
 const result=new circle(5);
 console.log(result.getArea());

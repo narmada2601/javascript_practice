@@ -78,7 +78,79 @@ function getAccessLevel(role)
 console.log(getAccessLevel("admin"));
 console.log(getAccessLevel());   
 
+//switch case
+let platformaccess="amazonprime";
+let ott1="amazonprime";
+let ott2="netflix";
+let ott3="zee5";
+switch(platformaccess)
+{
+    case ott1:
+        {
+            console.log("you have access to watch amazon prime");
+             break;   
+        }
+        case ott2:
+        {
+            console.log("you have access to watch Netflix");
+             break;   
+        }
+        case ott3:
+        {
+            console.log("you have access to watch zee5");
+             break;   
+        }
+         default:
+            {
+                console.log("no access.....");
+            }
 
+}
+//switch case
+let daynumber=3;
+switch(daynumber)
+{
+    case 1:
+        {
+            console.log("Today is Sunday");
+            break;
+        }
+        case 2:
+        {
+            console.log("Today is Monday");
+            break;
+        }
+        case 3:
+        {
+            console.log("Today is Tuesday");
+            break;
+        }
+        case 4:
+        {
+            console.log("Today is Wednesday");
+            break;
+        }
+        case 5:
+        {
+            console.log("Today is Thursday");
+            break;
+        }
+        case 6:
+        {
+            console.log("Today is Friday");
+            break;
+        }
+        case 7:
+        {
+            console.log("Today is Saturday");
+            break;
+        }
+        default:
+            {
+                console.log("enter valid day number");
+                break;
+            }
+}
 
 
 

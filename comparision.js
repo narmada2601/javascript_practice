@@ -42,3 +42,20 @@ if (currentSpeed <= speedLimit) {
 } else {
     console.log("Slow down! Speeding detected.");
 }
+
+// Using == (Equality) - type coercion occurs
+let num1 = 5;
+let str1 = "5";
+
+console.log("Using == : ", num1 == str1); // true (because '5' is converted to a number)
+
+// Using === (Strict Equality) - no type conversion
+console.log("Using === : ", num1 === str1); // false (number is not equal to a string)
+
+// Another example with boolean
+let boolVal = true;
+let num2 = 1;
+
+console.log("true == 1 :", boolVal == num2); // true (because `true` is converted to `1`)
+console.log("true === 1 :", boolVal === num2); // false (boolean is not strictly equal to number)
+

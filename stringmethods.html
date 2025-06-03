@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>string methods</title>
+        
+    </head>
+    <body>
+        <script>
+            //toUpperCase converts string to uppercase letters...
+         let area="ammenpur";
+         console.log("the uppercase:  "+area.toUpperCase());
+         //length---length of the string
+         console.log("the length of the string: "+area.length);//8
+
+         //toLowercase --converts to lowercase 
+         let name="LIKHIL VIHAAN";
+         console.log("the lowercase : "+name.toLowerCase() );
+
+        //include() ----check string contain specific substring
+          let  sentence ="tony the tiger feeling hungry ";
+          console.log("sentence contain tiger: "+sentence.includes("tiger"));//boolean-true
+
+         //indexof()-----find the occurance of the string
+         console.log("index of the string is: "+sentence.indexOf("tiger"));//9
+
+         //slice----extracts the portion of the string
+         console.log("portion of the string is: "+sentence.slice(10,15));//iger
+         
+         //substring----extract characters between two indices...
+
+         console.log("we are using substring method: "+sentence.substring(0,20));
+          //tony the tiger feeli
+
+          //replace--replace string with another character
+
+          console.log("we are using replacing the string: "+sentence.replace("tiger","lion"));
+           
+          //trim-remove white spaces from both the ends of the string...
+
+          console.log("we are triming the string:  "+sentence.trim());
+          
+          //split -based on a delimiter in array  format
+             let fruits="apple,banana,strawberry";
+          console.log("we are spliting the sentence:"+fruits.split(","));
+           
+          //charAt--Returns the character at a specific index.
+          console.log("we are using charAt method:"+sentence.charAt(6));//t
+
+          //starts with---checks the string starts with a specific substring---
+          
+          console.log("start  with "+sentence.startsWith("tony"));//true
+
+          console.lo("ends with "+sentence.endsWith("hungry"));//true
+          //concat-join two or more strings
+
+          console.log("we are concating the strings:  "+sentence.concat("... "," it was searching for food"));
+             
+          
+
+
+
+
+
+
+         </script>
+    </body>
+
+</html>

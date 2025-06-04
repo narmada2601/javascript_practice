@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>validate using try catch</title>
+    </head>
+    <body>
+        <script>
+            function login(username,password)
+            {
+                //checks if username or password is empty
+                try{
+                    if(!usename==!password)
+                {
+                    throw new error("username and password cannnot be empty")
+                }
+                
+                    console.log("Login successful! Welcome, " + username + ".");
+                
+            }
+                catch(error){
+                console.log("error"+error);
+                }
+                finally{
+                    console.log("login attempt completed")
+                }
+
+                
+            }
+            console.log("Example 1: Valid Input");
+            console.log("narmada","123345");
+            //console.log("Example 2: inValid Input");
+           // console.log("","");
+            
+
+        </script>
+    </body>
+</html>

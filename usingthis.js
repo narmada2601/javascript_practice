@@ -8,7 +8,21 @@ let cardetails=function(){
     return cardetails;//i get the output of cars and price in console window.....
 }
 console.log(this);
-  
+// example
+ var author = {
+    name         : "RabindraNathTagore",
+    dateofbirth  : "May 7, 1861",
+    books        : ["Gitanjali", "The Home and the World", "Gora"],
+    getBooksCount : function(){
+        console.log("Author is",  this);
+        console.log("Athor DOB" , this.dateofbirth);
+        //console.log("Athor books" , this.books);
+        console.log("Athor name" , this.name);
+        console.log(this.Authors);
+    }
+}
+
+ author.getBooksCount() ;  
 //............object context.....................
 
 //let chips=lays;
@@ -44,6 +58,10 @@ function car(){
  ordercardetails();
 let information= cardetails.color;
 console.log("the colort of the car is:"+information);
+
+
+
+
 
 //.......constuctor function context--this refers to newobject has been created 
 

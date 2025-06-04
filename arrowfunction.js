@@ -42,7 +42,8 @@ let add=(a,b)=>
 }
 let sum=add(20,30);
 console.log(sum);
-
+//Use a for loop when you need to iterate a specific number of times. This is common when working with arrays or other collections where the size is known.
+Use a while loop when you need to repeat a block of code until a certain condition is met. This is useful when the number of iterations is not predetermined, such as when waiting for user input or reading data from a file.
 
 
 

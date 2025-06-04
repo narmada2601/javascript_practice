@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        ERROR HANDLING
+    </title>
+    <body>
+        <script>
+
+            function addNumbers(a,b){
+
+                try{
+                    if(typeof (a)!="number"&& typeof (b)!="number")
+                {
+                    console.log("both should be numbers");
+                }
+                else{
+
+               
+               return a+b;
+                }
+                }
+                catch(exp)
+                {
+                    console.log("pass valid arguments..."+exp);
+                }
+                finally
+                {
+                    console.log("exection completed");
+                }
+            }
+            //console.log("the addition of two numbers are:"+addNumbers(5,10));
+             console.log("the addition of two numbers are:"+addNumbers(5,'hello'));
+
+
+
+             //one more example
+
+             setTimeout(function(){
+                try{
+                    
+                    console.log("im handling the errors");
+                }
+                catch(ex)
+                {
+                    alert("error is caught here...");
+                }
+             },1000);
+
+
+
+             try{
+                let result=10/0;//result is infinity...
+                console.log("result is :"+result);
+             }
+        
+            catch(err){
+                console.log("error occurred",err)
+            }
+            finally{
+                console.log("this runs automatically....")
+            }
+
+            //example...
+            try{
+                let name;//undefined
+                console.log(name.length);
+                
+            }
+            catch(error){
+                console.log("name error "+error);//type error cannot read properties of undefined
+            }
+            try{
+    let numberArray=[1,2,3,4,5,6];
+ 
+    let arr=Array(-1);
+}
+catch(error){
+    console.log("error :",error);//range error.invalid array lenth
+ 
+}
+try{
+    let obj=null;
+    console.log(null);//null
+}
+catch(error){
+    console.log("error:"+error)
+}
+
+        </script>
+    </body>
+</html>

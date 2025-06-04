@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>
+            do while
+        </title>
+    </head>
+    <body>
+        <script>
+        //syntax:do {body of loop} while(condition);
+         let i=1;
+         do{
+              console.log(i);
+                   i=i+1;
+         }while(i<10);
+        //backward(10-1)
+        let j=10;
+        do{
+            console.log(j);
+            j--;
+        }while(j>0);
+
+        //using exception handling
+        count=0;
+        do{
+            try{
+                if(count>5)
+                {
+                   throw new Error("limit crossed");
+                }
+                console.log(`current count:${count}`);//0,1,2,3,4,5
+                count=count+1;
+            }
+            catch(error)
+            {
+                console.error(error);
+                break;
+            }
+        }
+        while(count<10);
+        console.log("loop ended...")
+
+        //using functions
+        function userAuthentication()
+        {
+            let userPassword;
+            const matchpassword="narmada123";
+            let attempts=0;
+            do{
+              userPassword=prompt("enter your password");
+              attempts=attempts+1;
+              if(userPassword!=matchpassword)
+              {
+                console.log("please check your password and try again");
+              }
+            }
+            while(userPassword!==matchpassword &&attempts<3);
+            if(userPassword=matchpassword)
+            {
+                console.log("access granted...welcome")
+            }
+            else{
+                console.log("too many failed attempts access denied");
+            }
+        }
+        userAuthentication();
+
+        </script>
+    </body>
+
+</html>

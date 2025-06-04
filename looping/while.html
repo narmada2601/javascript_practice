@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>while loop</title>
+    </head>
+    <body>
+        <script>
+            //while(target......){ code}
+            var info=0;
+              var student=[
+                {student_id:1 ,studentname:"narmada" ,branch:"cse"},
+                {student_id:2 ,studentname:"bubly",branch:"cse"},
+                {student_id:3 ,studentname:"pinky",branch:"cybersecurity"},
+                {student_id:4 ,studentname:"nisha",branch:"eee"},
+                {student_id:5 ,studentname:"riya",branch:"mechanical"},
+                {student_id:6 ,studentname:"payal",branch:"ece"},
+                {student_id:7 ,studentname:"aravind",branch:"AI"}
+
+              ];
+              console.log("student details.......")
+              while(info<7)
+              {
+                console.log(`${student[info].studentname},${student[info].branch}`);
+                
+                info=info+1;
+              }
+
+              //timer 
+              function CountdownTimer(seconds)
+              {
+                while(seconds > 0)
+              {
+                console.log(`Time left: ${seconds} seconds`);
+                seconds--;
+              }
+            
+                console.log("countdown completed.........")
+
+              }
+              CountdownTimer(5 );
+
+              //display numbers from 1-10
+              let i=1;
+              while(i<10)
+              {
+                  console.log(i);//print 1-9 numbers....
+                  i=i+1;
+              }
+
+
+
+
+
+        </script>
+    </body>
+</html>

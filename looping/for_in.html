@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>looping mechanism using for in</title>
+    </head>
+<body>
+    <script>
+        //syntax:for(key/property/member/value  in object){//code executed here.........}
+        let user_info={
+            name:"narmada",
+            age:"32",
+            gender:"female",
+            designation:"full stack developer",
+            company_name:"Misard software solutions"
+        };
+        console.log("user profile details..........");
+        console.log(user_info.company_name);//prints company name
+        for(value in user_info)
+        {
+            //console.log(value);//contains name,age,gender,designation,company_name
+           // console.log(user_info);//window document
+            console.log(`${value}: ${user_info[value]}`);//prints complete output...
+          
+        }
+         console.log("\n\n");
+//one more example
+
+const salaries={
+    likhil:20000,
+    padma:40000,
+    kishore:45000,
+    ragini:90000
+};
+//using for in  loop
+for(let key in salaries)
+{
+    let amount="$"+salaries[key];//adding $ symbol before the salary
+    console.log(`${key}:${amount}`);//display the values...
+    console.log("\n\n");
+}
+//iterate over string values
+const brand="biba";
+for(property in brand)
+{
+    console.log(`the brand is`+brand[property]);//biba line by line
+}
+//iterate over arrays
+const cars=["bmw","honda","suzuki","ford"];
+for ( vechile in cars)
+{
+    console.log(cars[vechile]);
+   
+}
+
+ console.log(cars[0]);
+
+
+//using arrays
+const colors=["red","green","yellow","blue"];//to print the index
+for(drawing in colors)
+{
+    console.log(`index:${drawing},value:${colors[drawing]}`);
+}
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

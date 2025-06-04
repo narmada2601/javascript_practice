@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>looping mechanism</title>
+    </head>
+    <body>
+        <script>
+            //syntax:for(variable of iterable){code here }
+            var movielist=[
+                {movieno:1 ,movietitle:"single"},
+                 {movieno:2 ,movietitle:"subham"},
+                  {movieno:3 ,movietitle:"mission_impossible"},
+                   {movieno:4,movietitle:"housefull3"}]
+                   for(movie of movielist){
+                    console.log("movie list are:"+movie);//it prints object as its is key value pair..
+                   
+                   }
+                   //one more example
+                   var ages=[12,18,50]
+                   for(age of ages){
+                    //console.log(age);//output-12,18,50//keep on looping till there are no elements
+                    if(age==12)
+                   {
+                    console.log("age is teenage");
+                   }
+                   if(age==18)
+                   {
+                    console.log("age is adult");
+                   }
+                   if(age==50)
+                   {
+                    console.log("age is eligible for senior citizen");
+                   }
+                   }
+                   //one more example
+                   const products=["apple_watch","laptop","smartphone","tv"]
+                   for(gadgets of products)
+                   {
+                    console.log("available products are :"+gadgets);//available products are apple_watch,laptop.....
+                   }
+                   //by using string
+                    
+                   let story_title="cred_frog";
+                   for(title of story_title)
+                   {
+                    
+                    console.log(title);//prints cred_frog line by line
+                   }
+                   console.log("tony the tiger feeling hungry"+story_title.concat(".","it was looking for food"));//string gets concatinate
+
+
+        //using for of in functions
+
+        let     countries=[
+                           {name:"India ",currency:"rupee"},
+                           {name:"Australia" ,currency:"Dollar"},
+                           {name:"France" ,currency:"Euro"},
+                           {name:"Japan" ,currency:"yen"}
+                        ]
+                        function country(result)
+                        {
+                            console.log(countries);
+                           return `This is ${result.name} and their currency is ${result.currency}`; 
+                        }
+                        for(result of countries)
+                        {
+                            let  country_currency=country(result);//calling the function
+                            console.log(country_currency);
+                        }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

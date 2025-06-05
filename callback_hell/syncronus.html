@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+//by using callbackfunction .......
+function sleep(miliseconds)
+{
+    var startDateTime=new Date().getTime();
+    var endDateTime=startDateTime+miliseconds;
+    while(new Date().getTime<endDateTime)
+{
+    //processsing the statements
+
+}
+}
+// }
+// function testSleep(){
+//     console.time(sleep);//TO PROVE THE TIME
+//     sleep();
+//   console.timeEnd(sleep);
+//     console.log("im done!!!");
+// }
+// testSleep();
+
+function Facebook(callbackFnfacebook)
+{
+     sleep(20000);
+    console.log("watching facebook");
+   
+    callbackFnfacebook();
+}
+function Instagram(callbackFninstagram)
+{
+    sleep(4000);
+    console.log("watching Instagram");
+    callbackFninstagram();
+}
+   function Twitter()
+{
+    sleep(6000);
+    console.log("watching Twitter");
+}
+ Facebook(()=>{//passing callback as arugument
+            Instagram(()=> {
+                      Twitter();
+                });
+         }); 
+     //console.timeEnd("feeling bored...");
+
+//one by one execution.....leads to syncronus calls....
+
+
+
+        </script>
+    </body>
+</html>

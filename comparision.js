@@ -59,3 +59,11 @@ let num2 = 1;
 console.log("true == 1 :", boolVal == num2); // true (because `true` is converted to `1`)
 console.log("true === 1 :", boolVal === num2); // false (boolean is not strictly equal to number)
 
+//example
+const obj1 = { a: 1 };
+const obj2 = { a: 1 };
+console.log(obj1 == obj2);//false
+console.log(obj1 === obj2);//false
+//because  objects are compared by reference, not by value. 
+// Since obj1 and obj2 point to different memory locations, 
+// both == and === comparisons return false.

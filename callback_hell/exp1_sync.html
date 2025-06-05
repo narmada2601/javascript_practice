@@ -1,0 +1,97 @@
+   <html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //here it is difficult to read ,difficult in handling exception.
+//          function box1()
+//          {
+//             console.log("this is box1");
+            
+
+//          }
+//          function box2()
+//          {
+//             console.log("this is box2");
+         
+//          }
+//          function box3()
+//          {
+//             console.log("this is box3");
+//          }
+//          // box1();
+//          // box2();
+//          // box3();
+//          //another way to declare
+//         //  (()=>{
+//         // (()=>{
+
+//         // })});
+//          box1(()=>{//passing callback as arugument
+//             box2(()=> {
+//                       box3();
+//                 })
+//          });
+
+//          //settime  out using callback
+//          function step1(callback) {
+//                    setTimeout(() => 
+//                    {
+//                        console.log("Step 1 completed");
+//                        callback();
+//                    }, 6000);
+//               }
+
+// function step2(callback) {
+//     setTimeout(() => {
+//         console.log("Step 2 completed");
+//         callback();
+//     }, 3000);
+// }
+
+// function step3(callback) {
+//     setTimeout(() => {
+//         console.log("Step 3 completed");
+//         callback();
+//     }, 1000);
+// }
+
+// // Callback hell!
+// step1(() => {
+//     step2(() => {
+//         step3(() => {
+//             console.log("All steps completed!");
+//         });
+//     });
+// });
+// //example
+function boilWater(callbackwater)
+ {
+           console.log("Water boiled");
+        callbackwater();
+}
+
+function servecoffee(callbackcoffee)
+ {
+     console.log(" coffee is ready....");
+        callbackcoffee();
+}
+
+function serveTea(callbacktea)
+ {
+       console.log("Tea served");
+        callbacktea();    
+}
+
+// callback hell!
+boilWater(() => {
+    servecoffee(() => {
+        serveTea(() => {
+            console.log("Enjoy your tea!!!!!!!!");
+        });
+    });
+});
+         </script>
+         </body>
+         </html>

@@ -1,0 +1,71 @@
+asyncronus using fetch
+<html>
+    <head>
+<title>asyncronus using fetch</title>
+    </head>
+
+<body>
+    <script>
+        
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())  // Convert response to JSON
+    .then(data => console.log(data))    // Log the fetched data
+    .catch(error => console.error('Error:', error)); // Handle errors
+
+//it returns the object completed:false id:1 title:"delectus aut autem userId:1"
+
+//using functions
+function fetchData(url) {
+    fetch(url)
+        .then(response => response.json()) 
+        .then(data => console.log("Fetched Data:", data)) 
+        .catch(error => console.error("❌ Error:", error)); 
+}
+
+// Calling the function with an API URL
+fetchData("https://jsonplaceholder.typicode.com/todos/2");
+
+let firstAddressAPI="https://jsonplaceholder.typicode.com/todos/1";
+let secondAddressAPI="https://jsonplaceholder.typicode.com/todos/2";
+let allAPI="https://jsonplaceholder.typicode.com/todos/";
+
+fetch(firstAddressAPI).then((response)=>
+{
+    return response.json()
+}).then((data)=>{
+    console.log("first address of api",data);
+
+})
+fetch(secondAddressAPI).then((response)=>
+{
+    return response.json()
+}).then((data)=>{
+    console.log("second address of api",data);
+
+})
+fetch(allAPI).then((response)=>
+{
+    return response.json()
+}).then((data)=>{
+    console.log(" address of  all api",data);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

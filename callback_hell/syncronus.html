@@ -7,8 +7,8 @@
 //by using callbackfunction .......
 function sleep(miliseconds)
 {
-    var startDateTime=new Date().getTime();
-    var endDateTime=startDateTime+miliseconds;
+    var startDateTime=new Date().getTime();//20:OO
+    var endDateTime=startDateTime+miliseconds;//20:20
     while(new Date().getTime<endDateTime)
 {
     //processsing the statements
@@ -26,7 +26,7 @@ function sleep(miliseconds)
 
 function Facebook(callbackFnfacebook)
 {
-     sleep(20000);
+     sleep(2000);
     console.log("watching facebook");
    
     callbackFnfacebook();
@@ -50,6 +50,22 @@ function Instagram(callbackFninstagram)
      //console.timeEnd("feeling bored...");
 
 //one by one execution.....leads to syncronus calls....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

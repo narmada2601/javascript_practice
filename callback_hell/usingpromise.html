@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>using promise in asyncronous</title>
+    </head>
+    <body>
+        <script>
+            
+        //     const myPromise = new Promise((resolve, reject) => {
+
+        //     let success=true;//checking condition
+        //     if(success)
+        //   {
+        //     resolve("successfully completed...");//success
+        //   }
+        //   else{
+        //     reject("something went wrong try again!");//reject
+        //   }
+        //   });
+          
+        //  myPromise.then((result)=>{
+        //     console.log(result);//successfully completed
+        //   }).catch((exp)=>
+        //   {
+        //     console.log(exp);
+        //   });
+
+          //to check false
+        //   function getmyfirstpromise()
+        //   {
+        //     const myPromise = new Promise((resolve, reject) => {
+
+        //     let success=true;//checking condition
+        //     if(success)
+        //   {
+        //     resolve("successfully completed...");//success
+        //   }
+        //   else{
+        //     reject("something went wrong try again!");//reject
+        //   }
+        //   });
+        //   }
+        
+        //  getmyfirstpromise().then((result)=>{
+        //     console.log(result);//successfully completed
+        //   }).catch((exp)=>
+        //   {
+        //     console.error(exp);
+        //   });
+
+//creating my own example
+let makeCoffee=new Promise((resolve,reject)=>
+{
+    let coffeeready=true;//false then it prints reject message...
+    setTimeout(()=>{
+        if(coffeeready)
+    {
+        resolve("coffee is ready☕ ")
+    }
+    else{
+        reject("failed to make a coffee")
+    }
+    },4000);
+});
+//usage of promise
+makeCoffee.then((message)=>{
+                       console.log(message);//coffee is ready
+                    }
+).catch((error)=>{
+    console.error(error);
+});
+//one more example
+
+
+// const checkLogin=new  Promise((resolve,reject)=>
+// {
+//     let isLogin=false;
+//     setTimeout(()=>{
+//         if(isLogin)
+//     {
+//         resolve("user is login  ✅");
+//     }
+//     else
+//     {
+//         reject(" ❌❌❌❌failed to login!!!!!")
+//     }
+//     },5000);
+// });
+// //using promise
+// checkLogin.then((print)=>{
+//     console.log(print);
+// }
+// ).catch(error => console.error(error))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+    </body>
+</html>

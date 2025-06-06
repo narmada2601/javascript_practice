@@ -4,35 +4,76 @@
     </head>
     <body>
         <script>
- function box1()
-         {
-            setTimeout(()=>{
+//  function box1()
+//          {
+//             setTimeout(()=>{
 
-                console.log("this is box1");
+//                 console.log("this is box1");
 
-            },2000);
+//             },2000);
             
-        }
-         function box2()
-         {
-            setTimeout(()=>{
+//         }
+//          function box2()
+//          {
+//             setTimeout(()=>{
 
-                console.log("this is box2");
+//                 console.log("this is box2");
 
-            },4000);
-         }
-         function box3()
-         {
-            setTimeout(()=>{
+//             },4000);
+//          }
+//          function box3()
+//          {
+//             setTimeout(()=>{
 
-                console.log("this is box3");
+//                 console.log("this is box3");
 
-            },5000);
-         }
-        box1();
-        box2();
-        box3();  
+//             },5000);
+//          }
+//         box1();
+//         box2();
+//         box3(); 
         
+         //settime  out using callback
+//          function step1(callback) {
+//                    setTimeout(() => 
+//                    {
+//                        console.log("Step 1 completed");
+//                        callback();
+//                    }, 6000);
+//               }
+
+// function step2(callback) {
+//     setTimeout(() => {
+//         console.log("Step 2 completed");
+//         callback();
+//     }, 3000);
+// }
+
+// function step3() {
+//     setTimeout(() => {
+//         console.log("Step 3 completed");
+//        
+//     }, 1000);
+// }
+
+// // Callback hell!
+// step1(() => {
+//     step2(() => {
+//         step3(() => {
+//             console.log("All steps completed!");
+//         });
+//     });
+// });
+console.log("execution begins");
+function test()
+{
+    setTimeout(()=>{
+        console.log("running the execution....");
+    },2000);
+
+console.log(" exection stops here........")
+}
+test();
 
         </script>
     </body>

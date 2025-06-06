@@ -76,6 +76,7 @@ showmovieDetails(() => {
     return `movieName:${movieDetails.movieName} , movieActor:${movieDetails.movieActor}`;
 });
 
+
 //IIFE, variable function and arrow function
  
 (function(){

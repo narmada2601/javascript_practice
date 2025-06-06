@@ -1,0 +1,23 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function downloadfile(callbackfile) {
+            console.log("file downloaded starts here....");
+            setTimeout(() => {
+                console.log("download completed....");
+                callbackfile();
+            }, 5000);
+        }
+        function processfile() {
+            console.log("processing the file.wait for few seconds....")
+        }
+        downloadfile(processfile);
+    </script>
+</body>
+
+</html>

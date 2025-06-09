@@ -1,0 +1,65 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //constuctor-trigger when class called
+           //property-declare variables 
+           //method-when object call
+           class School{ 
+
+    //fields;  // hold the value//directly we can use
+     //sName = "John";
+    
+     sName;   //undefined
+     sID = 1;
+
+    constructor(name,id){
+        console.log(`Student name is ${name}`);
+        this.sName =  name
+        this.sID = id;
+    }
+
+    //Method - Member
+    enrollStundent(){
+        console.log(`Student Name is ${this.sName}  and his enroll id is ${this.sID}`);
+    }
+
+    getStundentSubjects(){
+        return ["English" , "Hindi" , "Maths"];
+    }
+
+}
+
+
+//new School().enrollStundent();
+const mySchool = new School("John" , "123456"); // instace of the object   f11
+mySchool.enrollStundent();
+let studentBooks = mySchool.getStundentSubjects();
+console.log(studentBooks);
+
+//using property .....we need use get and set methods
+class Employee {
+    constructor(name, age, location, hobbies) {
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.hobbies = hobbies; // Array of hobbies
+    }
+
+    getDetails() {
+        return `Name: ${this.name}, Age: ${this.age}, Location: ${this.location}, Hobbies: ${this.hobbies.join(", ")}`;
+    }
+}
+
+let emp = new Employee ("Aravind", 25, "Ameenpur, India", ["Reading", "Coding", "Traveling"]);
+console.log(emp.getDetails()); 
+
+
+
+
+           
+        </script>
+    </body>
+</html>

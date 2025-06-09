@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // class BookMovie
+            // {
+            //     constructor(moviename,timing,seatNumber,)
+            //     {
+            //         this.moviename=moviename;
+            //         this.timing=timing;
+            //         this.seatNumber=seatNumber;
+                    
+            //     }
+            //     getBookingDetails=()=>
+            //     {
+            //         return`you booked "${this.moviename}at ${this.timing}
+            //         seat number:${this.seatNumber}`;
+            //     }
+            //     cancelBooking=()=>
+            //     {
+            //         this.moviename=null;
+            //         this.timing=null;
+            //         this.seatNumber=null;
+            //         return"your booking has been cancelled";
+            //     }
+            // } 
+            // let movieDetails=new BookMovie("OG","7:30AM","B1");
+            // console.log(movieDetails.getBookingDetails());//BOOKING DETAILS
+            // console.log(movieDetails.cancelBooking());//your booking has been cancelled
+            // console.log(movieDetails.getBookingDetails());//you booked null at null
+
+//adding payment 
+class MovieBooking {
+    constructor(movie, timing, seat, price) {
+        this.movie = movie;
+        this.timing = timing;
+        this.seat = seat;
+        this.price = price;
+        this.isPaid = false;
+    }
+
+    amount = () => {
+        this.isPaid = true;
+        return "Payment successful!";
+    };
+
+    getDetails = () => 
+    console.log(`Movie: ${this.movie}, Time: ${this.timing}, Seat: ${this.seat}, Price: ₹${this.price}, 
+    Paid: ${this.isPaid ? "Yes" : "No"}`);
+}
+
+let booking = new MovieBooking("OG", "7:30 AM", "A2", 300);
+console.log(booking.getDetails()); // Shows booking details
+console.log(booking.amount()); // Payment successful
+console.log(booking.getDetails()); // Updated payment status
+             </script>
+           
+
+             </html>

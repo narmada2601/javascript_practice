@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+                function car(name,year){
+                     this.name=name;
+                       this.year=year;
+                   }
+car.prototype.getDetails = function() {
+    return `${this.name}  ${this.year}`;
+};
+  
+ Car=new car("bmw M340i","2025");
+console.log(Car.getDetails());
+</script>
+</body>
+</html>

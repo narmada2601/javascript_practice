@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title >using set and get methods in my class</title>
+    </head>
+</html>
+<body>
+    <script>
+            class car{
+                constructor()
+                {
+                    this.name="rolls_royce"
+                    this.brand="cullinan";
+                    this.price="6.9cr ";
+                }
+                getDetails()
+                {
+                    return `the name of my car is : ${this.name}
+                    and its brand is  : ${this.brand} 
+                    and price of my car is : ${this.price}`;
+                }
+            }
+            let myCar=new car();
+            console.log(myCar.getDetails());
+
+     
+         //example
+          class Product{
+            name;
+            constructor(name,price,category)
+            {
+                   this.name=name;
+                   this.price=price;
+                   this.category=category;
+            }
+        
+            getDetails() {
+        return `${this.name} belongs to the ${this.category} category and costs ₹${this.price}`;
+    }
+          }
+    let product1 = new Product("Laptop", 55000, "Electronics");//creating multiple objects from a class.
+    let product2 = new Product("Shoes", 500, "Fashion");
+     console.log(product1.getDetails());
+      console.log(product2.getDetails());
+
+
+    </script>
+</body>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>using call back functions</title>
+        
+    </head>
+    <body>
+        <script>
+
+            // class calculator
+            // {
+            //     constructor(){
+            //          this.result=0;
+            //     }
+            //     add(a,b)
+            //     {
+            //         this.result=a+b;
+            //         return`addition of two numbers are :${this.result}`;
+            //     }
+            //     substract(a,b)
+            //     {
+            //         this.result=a-b;
+            //         return`subtraction of two numbers are :${this.result}`;
+            //     }
+            //     multiply(a,b)
+            //     {
+            //         this.result=a*b;
+            //         return`multiply of two numbers are :${this.result}`;
+            //     }
+            //     divide(a,b)
+            //     {
+            //         if (b==0)
+            //     {
+            //         return "error: division of zero is not allowed";
+            //     }
+            //     else{
+            //         this.result=a/b;
+            //         return `division of two numbers are ${this.result}`;
+            //     }
+            //     }
+            // }  
+            //    let   calc =new calculator();
+            //      console.log(calc.add(12,5));
+            //      console.log(calc.substract(10,5));
+            //      console.log(calc.multiply(3,5));//
+            //      console.log(calc.divide(10,5));//2
+            //      console.log(calc.divide(10,0));//division of zero is not allowed.
+        //same program using callback function
+ 
+
+class calculator{
+            constructor()
+            {
+                this.result=0;
+            }
+             operation(a,b,callback)//method
+             {
+                  this.result=callback(a,b);
+                   return `result: ${this.result}`;
+             }
+     }
+ function add(a,b) {
+    return a+b;
+}
+ 
+function subtract(a,b) {
+    return a-b;
+}
+ 
+function multiply(a,b) {
+    return a*b;
+}
+function divide(a,b)
+                {
+                    if (b==0)
+                {
+                    return "error: division of zero is not allowed";
+                }
+                else{
+                    this.result=a/b;
+                    return `division of two numbers are ${this.result}`;
+                }
+                }
+
+        let calc =new calculator();
+        console.log(calc.operation(10,5,add));
+         console.log(calc.operation(10,5,subtract));
+          console.log(calc.operation(10,5,multiply));
+           console.log(calc.operation(10,5,divide));
+            console.log(calc.operation(10,0,divide));
+        
+        </script>
+    </body>
+</html>

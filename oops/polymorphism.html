@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>polymorphism</title>
+        </title>
+    </head>
+    <body>
+        <script>
+            class Vechile{
+                move()
+                {
+                    console.log("the vechile moves ")
+                }
+            }
+            class bike extends Vechile
+            {
+                move()//over ride
+                {
+                    console.log("This is land Transport");
+                }
+                
+            }
+            class bike extends Vechile
+            {
+                move()//over ride
+                {
+                    console.log("This is land vechile");
+                }
+                
+            }
+            class Aeroplane extends Vechile
+            {
+                move()//over ride
+                {
+                    console.log("This is Air Transport");
+                }
+                
+            }
+            
+
+        </script>
+    </body>
+</html>

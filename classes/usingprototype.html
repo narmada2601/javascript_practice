@@ -4,16 +4,28 @@
     </head>
     <body>
         <script>
-                function car(name,year){
-                     this.name=name;
-                       this.year=year;
-                   }
-car.prototype.getDetails = function() {
-    return `${this.name}  ${this.year}`;
-};
+//                 function car(name,year){
+//                      this.name=name;
+//                        this.year=year;
+//                    }
+// car.prototype.getDetails = function() {
+//     return `${this.name}  ${this.year}`;
+// };
   
- Car=new car("bmw M340i","2025");
-console.log(Car.getDetails());
+//  Car=new car("bmw M340i","2025");
+// console.log(Car.getDetails());
+class school{
+    sName="kavya";
+    sId="505";
+}
+let myschool=new school();
+console.log(myschool.sName);
+console.log(myschool.sId);
+setTimeout(function() {// this inside the setTimeout function does not refer to the instance of school.
+
+    console.log(`%c student name is: ${this.sName} and his roll number is ${this.sId}`, "color:yellow");
+}.bind(myschool), 2000);
+console.log(myschool.sId);
 </script>
 </body>
 </html>

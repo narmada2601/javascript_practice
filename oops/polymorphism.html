@@ -6,37 +6,100 @@
     </head>
     <body>
         <script>
-            class Vechile{
-                move()
-                {
-                    console.log("the vechile moves ")
-                }
-            }
-            class bike extends Vechile
-            {
-                move()//over ride
-                {
-                    console.log("This is land Transport");
-                }
+            //polymorphism -over ride takes place..
+//             class Vechile{
+//                 move()
+//                 {
+//                     console.log("Types of Transport ")
+//                 }
+//             }
+//             class bike extends Vechile
+//             {
+//                 move()//over ride
+//                 {
+//                     console.log("Bike is land Transport");
+//                 }
                 
-            }
-            class bike extends Vechile
-            {
-                move()//over ride
-                {
-                    console.log("This is land vechile");
-                }
+//             }
+//             class ship extends Vechile
+//             {
+//                 move()//over ride
+//                 {
+//                     console.log("Ship is waterTransport");
+//                 }
                 
-            }
-            class Aeroplane extends Vechile
-            {
-                move()//over ride
-                {
-                    console.log("This is Air Transport");
-                }
+//             }
+//             class Aeroplane extends Vechile
+//             {
+//                 move()//over ride
+//                 {
+//                     console.log("Aeroplane is Air Transport");
+//                 }
                 
-            }
-            
+//             }
+// const Bike=new bike();
+// Bike.move();
+
+// const Ship=new ship();
+// Ship.move();
+
+// const aeroplane=new Aeroplane();
+// aeroplane.move();
+
+//using constructor and super method......
+
+
+class Vehicle {
+  constructor(name, speed) {
+    this.name = name;
+    this.speed = speed;
+  }
+  move()
+  {
+    console.log(`${this.name} moves at ${this.speed}kms.`);
+  }
+}
+class car extends Vehicle{
+    constructor(name,speed,engineType)
+    {
+        super(name,speed);//parent constructor
+        this.engineType=engineType;
+    }
+    move()
+    {
+        console.log(`${this.name} moves at ${this.speed}kms and engine type is ${this.engineType}`);
+
+    }
+}
+class Bike extends Vehicle{
+    constructor(name,speed,vehicleType)
+    {
+        super(name,speed);//parent constructor
+        this.vehicleType=vehicleType;
+    }
+    move()
+    {
+        console.log(`${this.name} moves at ${this.speed}kms and  vehicle type is ${this.vehicleType}`);
+        
+    }
+}
+//creating instance.
+let Car= new car("Mahindra XUV 700",120,"Turbo Petrol Engine");
+Car.move();
+
+let bike=new Bike("Davidson",354,"self");
+bike.move();
+
+
+
+
+
+
+
+
+
+
+
 
         </script>
     </body>

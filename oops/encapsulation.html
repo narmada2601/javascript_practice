@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+            Encapsulation means building data and methods into the object
+        </title>
+    </head>
+    <body>
+        <script>
+            class school{
+                //private fields
+                #schoolName
+                #schoolLocation
+                constructor(name,location)
+                {
+                    this.name=name;
+                    this.location=location;
+                }
+                enrollStudents()
+                {
+                    //methods inside the object
+                    let student={
+                        name:"Likhil",
+                        id:"1"
+            
+                    }
+                    console.log(`student  ${student.name} has enrolled to ${this.#schoolName}`);
+
+                }
+            }
+                let Myschool=new school("Raibow","hyderbad")
+                  Myschool.enrollStudents();
+            ///my own example
+
+            class Bus
+            {
+                #routeNo;//access outside of the class
+                #capacity;//private fields
+                constructor(routeNo,capacity)
+                {
+                    this.#routeNo=routeNo;
+                    this.#capacity=capacity;
+
+                }
+                //method
+                getBusInfo()
+                {
+                    return `this Bus route is ${this.#routeNo} and having seating capacity of ${this.#capacity}`;
+                }
+
+            }
+        let citybus=new Bus(1,30);
+        console.log(citybus.getBusInfo());
+
+        let schoolbus=new Bus(2,20);
+        console.log(schoolbus.getBusInfo());
+
+
+//one more example
+class person
+{
+    #age;//private field
+
+
+constuctor(name,age)
+{
+    this.name=name;
+    this.#age=age;
+}
+//getter method to access the private field
+get age(){
+    return this.#age;
+
+}
+//setter method to update the field
+set age(newAge)
+{
+    if (newAge>0)
+{
+    this.#age=newAge;
+}
+else 
+{
+    console.log("invalid age");
+}
+}
+}
+//instance
+const person1 = new person("Aravind", 25);
+
+console.log(person1.age); // Accessing age using getter
+
+person1.age=10;//updating
+console.log(person1.age);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>
+            Inheritence
+        </title>
+    </head>
+    <body>
+        <script>
+            // extends keyword allows a class to inherit from another
+         class Animal
+         {
+            speak()
+            {
+                console.log("the animal makes sound");
+            }
+         }
+         class Dog extends Animal
+         {
+            speak()
+            {
+                console.log("dog barks:")
+            }
+         }
+         class Cat extends Animal
+         {
+            speak()
+            {
+                console.log("cat meows:")
+            }
+         }
+         let dog=new Dog();
+         dog.speak();
+         let cat=new Cat();
+         cat.speak();
+         //by using super -called when there is constructor
+        // Inheritance example
+class person {
+    constructor(name) {
+        this.name = name;
+    }
+    // method to return the string
+    toString() {
+        return (`Name of person: ${this.name}`);
+    }
+}
+class student extends person {
+    constructor(name, id) {
+        // super keyword for calling the above  class constructor
+        super(name);
+        this.id = id;
+    }
+    toString() {
+        return (`${super.toString()},Student ID: ${this.id}`);
+    }
+}
+let student1 = new student('Narmada', 32);
+console.log(student1.toString()); 
+
+
+
+
+        </script>
+    </body>
+</html>

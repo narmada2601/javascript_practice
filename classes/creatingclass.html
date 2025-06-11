@@ -1,40 +1,37 @@
 <html>
-    <head>
-        <title>creating classes....</title>
-        </title>
-    </head>
-    <body>
-        <script>
-            //creating class without parameters
-            class motar//class name is motar
-            {
-              constructor()//constructor
-              {
-                this.isOn=false;//setting to default
-              }
-             turnOn()//method to modify
-             {
-                this.isOn=true;
-                return "the motar is on";
-             }
-             turnOff()
-             {
-                this.isOn=false;
-                return "the motar is off";
-             }
-             getStatus(){//to check the display of my motar
-                return this.isOn? "the motar is running":"the motar is off";
-             }
-             }
-            let switchmotar=new motar;
-            console.log(switchmotar.getStatus());//the motar is off
-            console.log(switchmotar.turnOn());//the motar is on
-            console.log(switchmotar.getStatus());//the motar is running
-            console.log(switchmotar.turnOff());//the motar is off..
-           
 
+<head>
+  <title>creating classes....</title>
+  </title>
+</head>
 
-           
+<body>
+  <script>
+    //creating class without parameters
+    class motar//class name is motar
+    {
+      constructor()//constructor
+      {
+        this.isOn = false;//setting to default
+      }
+      turnOn()//method to modify
+      {
+        this.isOn = true;
+        return "the motar is on";
+      }
+      turnOff() {
+        this.isOn = false;
+        return "the motar is off";
+      }
+      getStatus() {//to check the display of my motar
+        return this.isOn ? "the motar is running" : "the motar is off";
+      }
+    }
+    let switchmotar = new motar;
+    console.log(switchmotar.getStatus());//the motar is off
+    console.log(switchmotar.turnOn());//the motar is on
+    console.log(switchmotar.getStatus());//the motar is running
+    console.log(switchmotar.turnOff());//the motar is off..
 
 
 
@@ -61,28 +58,31 @@
 
 
 
-            //with parameters
-            class Book{
-                 constructor(title,author,pages)
-                 {
-                   this.title=title;
-                   this.author=author;
-                   this.pages=pages;
-
-                 }
-                 getBookDetails()
-                 {
-                    return `${this.title}is written ny ${this.author} and pages are ${this.pages}`;
-                 }
-            }
-            //creating the instance of class
-            let myBook=new Book("Wings of Fire","APJ ABDUL KALAM","180");
-            console.log(myBook.getBookDetails());
 
 
 
 
+    //with parameters
+    class Book {
+      constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
 
-        </script>
-    </body>
+      }
+      getBookDetails() {
+        return `${this.title}is written ny ${this.author} and pages are ${this.pages}`;
+      }
+    }
+    //creating the instance of class
+    let myBook = new Book("Wings of Fire", "APJ ABDUL KALAM", "180");
+    console.log(myBook.getBookDetails());
+
+
+
+
+
+  </script>
+</body>
+
 </html>

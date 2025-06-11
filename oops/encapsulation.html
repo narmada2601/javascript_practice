@@ -10,9 +10,10 @@
                 //private fields
                 #schoolName
                 #schoolLocation
+                #schoolStrength
                 constructor(name,location)
                 {
-                    this.name=name;
+                    this.#schoolName=name;
                     this.location=location;
                 }
                 enrollStudents()
@@ -23,7 +24,7 @@
                         id:"1"
             
                     }
-                    console.log(`student  ${student.name} has enrolled to ${this.#schoolName}`);
+                    console.log(`student  ${student.name} has enrolled to ${ this.#schoolName}`);
 
                 }
             }

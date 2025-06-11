@@ -1,0 +1,14 @@
+MODULES:
+
+JavaScript modules allow you to break up your code into separate files.
+
+This makes it easier to maintain a code-base.
+
+Modules are imported from external files with the import statement.
+
+Modules also rely on type="module" in the <script> tag.
+
+ ES6 modules and CommonJS modules are two different ways to handle modularity in JavaScript. Here’s how they differ:
+1. Syntax Differences
+- ES6 Modules use import and export statements.
+- CommonJS uses require() and module.exports.

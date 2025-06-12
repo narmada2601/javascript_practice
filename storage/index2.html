@@ -1,0 +1,28 @@
+ <html>
+    <head>
+        <title>local storage </title>
+    </head>
+    <body>
+          <p id="result"></p>
+          <h2>LocalStorage Data Fetch</h2>
+
+        <script type="module">
+               localStorage.setItem("username", "Likhil Vihaan");
+             localStorage.setItem("password", "123456");
+               //localStorage.removeItem("username");
+           //retrive
+           const storeName=localStorage.getItem("username");
+         //display it in html
+        
+          if(storeName)
+          {
+            document.getElementById("result").innerText = `Welcome back ${storeName}`;
+
+          }
+          else{
+            document.getElementById("result").innerText = "No data found in local";
+          }
+
+        </script> 
+    </body>
+</html>

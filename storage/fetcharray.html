@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+        fetch arrays of objects in local storage 
+        </title>
+    </head>
+    <body>
+        <script>
+            const employee=[
+            {empId:1,empName:"Nikhil",empDesignation:"fullstack Developer"},
+            {empId:2,empName:"Divya",empDesignation:".net Developer"},
+        ]
+    //store them in local storage
+   localStorage.setItem("employee",JSON.stringify(employee));
+   // Retrieve the array from local storage
+const EmployeeInfo = JSON.parse(localStorage.getItem("employee"));
+
+console.log(EmployeeInfo); 
+        </script>
+    </body>
+</html>

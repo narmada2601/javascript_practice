@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>My smart juicer machinme</title>
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fffae3;
+        }
+        #juice-message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 12px 20px;
+            font-size: 18px;
+            margin: 5px;
+           
+            background-color: #f5e9d4;
+            color: rgb(65, 59, 59);
+    
+        
+        }
+
+
+
+    </style>
+  
+    <body background="juice.jpg">
+        <h1>welcome to smart juicer machine</h1>
+        <br>
+        <label for="fruit" >Select  your fruit</label>
+    <select id="fruit">
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Banana">Banana</option>
+        <option value="Pineapple">Pineapple</option>
+        <option value="Mango">Mango</option>
+    </select>
+    <br>
+    <button class="button" onclick="makeJuice()">Make Juice</button>
+     <p id="juice-message"></p>
+<br>
+    <script>
+      
+        // Load saved juice choice
+        window.onload = function() {
+            let savedJuice = localStorage.getItem("favoriteJuice");
+            if (savedJuice) {
+                document.getElementById("juice-message").innerText = `Your favorite juice is ${savedJuice}! 🍹`;
+                document.getElementById("fruit").value = savedJuice;
+            }
+        };
+
+        function makeJuice() {
+            let fruit = document.getElementById("fruit").value;
+            document.getElementById("juice-message").innerText = `Blending your delicious ${fruit} juice...`;
+
+            setTimeout(() => {
+                document.getElementById("juice-message").innerText = `${fruit} juice is ready! Enjoy your refreshment 🍹`;
+                
+                // Save favorite juice to local storage
+                localStorage.setItem("favoriteJuice", fruit);
+            }, 3000);
+        }
+
+
+    </script>
+    
+    </body>
+</html>

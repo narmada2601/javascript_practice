@@ -1,0 +1,104 @@
+<html>
+    <title>functions</title>
+</html>
+<body>
+    <script>
+        
+        function sum()
+        {
+             let a=10;//statements
+             let b=a++;
+             console.log("addition without parameters"+a,b); //11,10 
+        }
+        sum();
+        //passing as parameters
+        function sub(a,b)
+        { 
+            let result=a-b;
+           
+            console.log("the sub "+result);
+        }
+        sub(40,20);
+       // console.log(result);//error
+        
+       //function with return statements
+       function findSquare(num)
+       {
+           return num*num;
+           //console.log("after return  statement the code is not executed");
+       }
+       let output=findSquare(5);
+       console.log("the square of two numbers are"+output);
+       //default parameters
+       function sayHello(name = "friend") {
+        console.log(`Hello, ${name}!`);
+       }
+               sayHello();           // Output: Hello, friend!
+                sayHello("Narmada");  // Output: Hello, Aravind!
+                //callback functions: function passed as an argument to another function,
+                //  and it's executed after the outer function finishes its task.
+                //  This is especially useful for handling asynchronous operations like API calls, timers, or event listeners.
+
+function calculate(a, b, callback) {
+  return callback(a, b);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+function multiply(x, y) {
+  return x * y;
+}
+
+console.log(calculate(5, 3, add));      
+console.log(calculate(5, 3, multiply)); 
+
+//anomonous function function without names
+let show = function() {
+    console.log('Anonymous function');
+};
+//passing anomonous function as anotherfunction
+setTimeout(function() {
+    console.log('Execute later after 1 second');
+}, 1000);
+
+show();
+//simple example
+let fullName = {
+    firstName: 'Narmada',
+    lastName: 'Teegala'
+};
+// create a function and execute it immediately after the declaration,IIFE
+(function () {
+    console.log(fullName.firstName + ' ' + fullName.lastName);
+})(fullName);
+()=>{
+
+}
+//ARROW FUNCTION  also an instance of the Function type 
+//anonoymous function
+function bookName(){
+                    console.log("wings of fire");
+}
+bookName();
+//arrow function
+let authorName = ()=>{
+    console.log("apj abdul kalam");
+   
+}
+authorName();
+console.log(typeof authorName);
+
+//rest parameters-Rest parameters in JavaScript allow you to represent an indefinite number of arguments as an array.
+
+
+
+
+
+
+
+
+
+    </script>
+</body>

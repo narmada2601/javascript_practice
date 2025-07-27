@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    display:flex;
+    min-height:100vh;/*viewport height*/
+    justify-content:center;
+    align-items: center;
+    background-color:rgb(150, 102, 150);
+    font-family: 'Courier New', Courier, monospace;
+    background-image: "book.jpg";
+}
+.container
+{
+    background-color:rgb(181, 125, 189);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px;
+    width: 90%;
+    margin:10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+   max-width: 450px;
+}
+.heading
+{
+  font-size: 40px;
+  font-display:block ;  
+}
+.meaning-container
+{
+    display: none;
+}
+.input{
+    height: 60px;
+    width: 300px;
+    background-color:rgb(161, 49, 117);
+    border-color: rgba(92, 50, 50, 0.4);
+    font-size: 20px;
+    padding: 0 42px;
+    border-radius: 10px;
+}

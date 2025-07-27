@@ -1,0 +1,25 @@
+*
+{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:monospace;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100%;
+    background-color: rgb(79, 87, 158);
+}
+.container{
+    position:relative;
+    display:flex;
+    gap:30px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding:40px 50px;
+    background:wheat;
+    
+}

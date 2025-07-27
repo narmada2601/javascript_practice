@@ -1,0 +1,110 @@
+<html>
+    <head>
+       <title> Memory Game</title>
+       <style>
+    
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:monospace;
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100%;
+    background-color: rgb(147, 252, 163);
+}
+.container{
+    position:relative;
+    display:flex;
+    gap:30px; 
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding:40px 50px;
+    background:rgb(67, 193, 178);
+    
+}
+h2{
+    font-size:3em;
+    color:azure;
+    text-transform:uppercase;
+    letter-spacing: 0.1em;
+}
+.reset:focus{
+    color:aliceblue;
+    background-color: bisque;
+}
+.game
+{
+    width:430px;
+    height:430px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    transform-style :preserve-3d;
+    perspective: 500px;
+}
+.reset:focus{
+    padding : 20px 15px;
+    color:aquamarine;
+    background:white ;
+    border:none;
+    cursor:pointer;
+    letter-spacing: 0.1em;
+    text-transform:uppercase;
+    font: weight 600px;
+    
+}
+.item
+{
+    position:relative;
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:3em;
+    background:whitesmoke;
+    transition:0.25s;
+
+}
+.item::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:goldenrod;
+    transform:rotate(odeg);
+
+    transition:0.25s;
+
+
+}
+
+       </style>
+
+    </head>
+
+<body>
+    <div class="container">
+        <h1>Memory Game</h1>
+            <div class="game"></div>
+            <button class="reset"onclick="window.location.reload()">Reset Game</button>
+    </div>
+    <script>
+        const emojis=["🐒","🐒","🐔","🐔","🐣","🐣","🐧","🐧","🐯","🐯","🐀","🐀","🐘","🐘","🐫","🐫"];
+      var shuffle_animal=emojis.sort(()=>(math.random()>.5)?2:-1);
+      for(var i=0;i<emojis.length;i++)
+      {
+        let box=document.createElement('div');
+        box.className='item';
+        box.innerHTML=shuffle_animal[i];
+        document.querySelector('.game').appendChild(box);
+      }
+    
+    
+    </script>
+</body>
+</html>
